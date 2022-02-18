@@ -7,7 +7,7 @@ const DogsPage = ({
   },
 }) =>
   nodes.map(({ dogId }) => (
-    <div>
+    <div key={dogId}>
       <Link to={dogId}>{dogId}</Link>
     </div>
   ))
