@@ -5,5 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
-  plugins: ["test-plugin"],
+  plugins: [
+    "test-plugin",
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "products",
+        path: `${__dirname}/src/products/`,
+      },
+    },
+  ],
 }
